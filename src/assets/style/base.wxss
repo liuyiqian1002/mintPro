@@ -1,0 +1,254 @@
+/*全局 CSS 变量*/
+/*主色调*/
+/*辅助色*/
+/*点缀色1*/
+/*点缀色2*/
+/*点缀色3*/
+/*warning [订单 待付款 ]*/
+/*success [订单 已完成]*/
+/*default [订单 已取消]*/
+/*danger [订单退款]*/
+/*重要文字/页内标题*/
+/*辅助内容/状态默认色*/
+/*次要内容文字颜色*/
+/*背景色*/
+/*淡背景色*/
+/*分割线色*/
+/*btn color*/
+.down-color {
+  color: #F25959;
+}
+.up-color {
+  color: #0CC2A4;
+}
+body,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+button,
+textarea,
+p,
+blockquote,
+th,
+td,
+a {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+body {
+  font-family: "microsoft yahei", "SimSun", "宋体", "Arial Narrow";
+}
+td,
+th,
+caption {
+  font-size: 12px;
+  text-align: left;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+  font-size: 100%;
+}
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+strong,
+th,
+var {
+  font-style: normal;
+  font-weight: normal;
+}
+a {
+  text-decoration: none;
+  color: #000;
+}
+a:hover {
+  text-decoration: none;
+}
+a:visited {
+  color: #000;
+  text-decoration: none;
+}
+select,
+img,
+select,
+img,
+label {
+  border: none;
+  vertical-align: middle;
+}
+ol,
+ul,
+li {
+  list-style: none;
+}
+input,
+textarea,
+select,
+button {
+  font: 14px Verdana, Helvetica, Arial, sans-serif;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+html {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+p {
+  word-wrap: break-word;
+}
+q:before,
+q:after {
+  content: '';
+}
+iframe {
+  display: block;
+}
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sup {
+  top: -0.5em;
+}
+sub {
+  bottom: -0.25em;
+}
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+.off {
+  display: none;
+}
+/* css common */
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: "";
+  clear: both;
+  height: 0;
+}
+.clearfix {
+  zoom: 1;
+}
+.clear {
+  clear: both;
+}
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+input:focus,
+a:focus {
+  outline: none;
+}
+a:active {
+  -webkit-tap-highlight-color: transparent;
+}
+input {
+  border-radius: 0;
+}
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  outline: none;
+  appearance: none;
+}
+input::-webkit-input-placeholder {
+  color: #999999;
+}
+input::-moz-placeholder {
+  color: #999999;
+}
+input:-ms-input-placeholder {
+  color: #999999;
+}
+div[class$="-btn"]:active {
+  opacity: 0.9;
+}
+.van-picker__cancel,
+.van-picker__confirm {
+  color: #0778D7 !important;
+}
+.van-nav-bar .van-nav-bar__left .van-icon {
+  color: #999999;
+}
+input,
+textarea,
+select,
+button {
+  font: 24px Verdana, Helvetica, Arial, sans-serif;
+}
+.van-nav-bar__text {
+  color: #333333 !important;
+}
+.main_btn {
+  background-color: #0778D7;
+  height: 100px;
+  color: #fff;
+  font-size: 28px;
+  width: 100%;
+  border-radius: 10px;
+}
+.main_btn:disabled {
+  background-color: #999999;
+}
+.bot_br {
+  border-bottom: 1px solid #eee;
+}
+.t {
+  border: 1px solid #f00;
+}
+.mc {
+  color: #0778D7;
+}
+.cf {
+  color: #C4DDFD;
+}
+.input_bg {
+  background: #1679F8 linear-gradient(180deg, #2A63FF 0%, #2761FA 100%);
+}
+.base_btn {
+  display: block;
+  width: 100%;
+  height: 84px;
+  margin: 30px 0 ;
+  font-size: 28px;
+  background: #0778D7;
+}

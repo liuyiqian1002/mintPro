@@ -1,0 +1,374 @@
+/*全局 CSS 变量*/
+/*主色调*/
+@main_color: #65BD8D;
+@main_color2: #48D2AE;
+@bg_clor:#0d1625;
+@panel_color:#152439;
+@font_f_color: #93A1A8;
+@font_1_color:#E0EDF5;
+@font_2_color:#000;
+@font_3_color:#fff;
+
+@font_color:#333333;
+/*辅助色*/
+@sub-color: #fbc115;
+/*点缀色1*/
+@ornament-color-1: #F4901E;
+/*点缀色2*/
+@ornament-color-2: #FD5C65;
+/*点缀色3*/
+@ornament-color-3: #828AFF;
+/*warning [订单 待付款 ]*/
+@warning-color: #FBC115;
+/*success [订单 已完成]*/
+@success-color: #1CED34;
+/*default [订单 已取消]*/
+@default-color: #CCCCCC;
+/*danger [订单退款]*/
+@danger-color: #FF7668;
+/*重要文字/页内标题*/
+@important-font-color: #333333;
+/*辅助内容/状态默认色*/
+@sub-font-color: #E0EDF5;
+@sub-font-color2: #e7e7e7;
+/*次要内容文字颜色*/
+@minor-font-color: #93A1A8;
+/*背景色*/
+@background-color: #0d1625;
+/*淡背景色*/
+@light-background-color: #EDF4FF;
+/*分割线色*/
+@splitter-color: #eeeeee;
+/*btn color*/
+@btn-color: #FF9900;
+@up-color:#0CC2A4;
+@down-color:#F25959;
+@bg-color:#EAF0F8;
+@main_f_color: #202021;
+// @font_f_color: #202021;
+@sub_f_color: #828282;
+@item_bg:#F5F6F7;
+@bg_color:#282724;
+//IOS版本<11.2
+@padding-bottom:constant(safe-area-inset-bottom);
+
+body {
+    background-color: @bg_clor;
+}
+
+.van-nav-bar {
+    background-color: @bg_clor;
+    .van-nav-bar__title{
+        color: @sub-font-color;
+    }
+    .van-icon{
+        color: @sub-font-color !important;
+    }
+}
+
+.van-nav-bar__title{
+    color:#fff;
+}
+.van-hairline--bottom:after {
+    border-bottom-width: 0px;
+}
+
+.van-empty__description{
+    color: @font_1_color;
+    font-size: 28px;
+}
+.van-tab {
+    background: @bg_clor;
+    padding: 0;
+}
+.van-tabs__nav{
+    background: @bg_clor;
+}
+
+.van-popup{
+    background-color: @bg_clor !important;
+    color: @font_1_color;
+}
+
+.down-color{
+    color: @down-color;
+}
+.up-color{
+    color: @up-color;
+}
+
+body,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+button,
+textarea,
+p,
+blockquote,
+th,
+td,
+a {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body {
+    font-family: "microsoft yahei", "SimSun", "宋体", "Arial Narrow";
+    // -webkit-text-size-adjust: 100%;
+
+}
+
+td,
+th,
+caption {
+    font-size: 12px;
+    text-align: left;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: normal;
+    font-size: 100%;
+}
+
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+strong,
+th,
+var {
+    font-style: normal;
+    font-weight: normal;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+a:visited {
+    color: #000;
+    text-decoration: none;
+}
+
+select,
+img,
+select,
+img,
+label {
+    border: none;
+    vertical-align: middle;
+}
+
+ol,
+ul,
+li {
+    list-style: none;
+}
+
+input,
+textarea,
+select,
+button {
+    font: 14px Verdana, Helvetica, Arial, sans-serif;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+html {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+
+p {
+    word-wrap: break-word
+}
+
+q:before,
+q:after {
+    content: '';
+}
+
+iframe {
+    display: block;
+}
+
+sub,
+sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+
+sup {
+    top: -0.5em;
+}
+
+sub {
+    bottom: -0.25em;
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.off {
+    display: none;
+}
+
+/* css common */
+
+.clearfix:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: "";
+    clear: both;
+    height: 0;
+}
+
+.clearfix {
+    zoom: 1;
+}
+
+.clear {
+    clear: both;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+input:focus,
+a:focus {
+    outline: none;
+}
+
+a:active {
+    -webkit-tap-highlight-color: transparent;
+}
+
+input {
+    border-radius: 0;
+}
+
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    outline: none;
+    appearance: none;
+}
+
+input::-webkit-input-placeholder {
+    color: @minor-font-color;
+}
+
+input::-moz-placeholder {
+    color: @minor-font-color;
+}
+
+input:-ms-input-placeholder {
+    color: @minor-font-color;
+}
+
+div[class$="-btn"]:active {
+    opacity: .9
+}
+
+.van-picker__cancel,
+.van-picker__confirm {
+    color: @main_color  !important;
+}
+
+.van-nav-bar {
+    .van-nav-bar__left {
+        .van-icon {
+            color: @minor-font-color;
+        }
+    }
+}
+input, textarea, select, button{
+    // font：14px Helvetica, Arial, sans-serif;
+    font:24px Verdana, Helvetica, Arial, sans-serif
+}
+.van-nav-bar__text{
+    color: @font_color !important;
+}
+.main_btn{
+    background-color: @main_color2;
+    height: 100px;
+    color: #fff;
+    font-size: 28px;
+    width: 100%;
+    border-radius:10px;
+    &:disabled{
+        background-color: @minor-font-color;
+    }
+}
+.bot_br{
+    border-bottom: 1px solid #0d1625;
+}
+.t{
+    border: 1px solid #f00;
+}
+.mc{
+    color: @main_color;
+}
+.cf{
+    color: @font_f_color;
+}
+.input_bg{
+
+    //background: #1679F8 linear-gradient(180deg, #2A63FF 0%, #2761FA 100%);
+    //   background: #1679F8 linear-gradient(180deg, #2A63FF 0%, #2761FA 100%)
+}
+.base_btn{
+    display: block;
+    width: 100%;
+    height: 84px;
+    margin: 30px 0 ;
+    font-size: 28px;
+    background: @main_color;
+
+
+}
