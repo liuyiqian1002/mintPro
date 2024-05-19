@@ -113,7 +113,7 @@ export default {
 
                 background: url(../assets/images/common/ic_langue_unselected.png) no-repeat;
                 background-color: @panel_color;
-                color:@font_1_color;
+                color:@font_color;
                 margin-bottom: 20px;
                 border-radius: 24px;
                 .bot_br;

@@ -2,19 +2,16 @@
   <div class="index_wrap">
     <downLoad  @closeDownLoad='closeDownLoad' v-show="showDownLoad"/>
     <div :class="['header',{'show_download':showDownLoad}]">
-        <img class="logo"  src="../assets/images/common/ic_home_head.png" alt="">
+        <img class="logo"  src="../assets/images/home/logo@2x.png" alt="">
         <div class="header_right">
-          <img   @click="nShow = true"  src="../assets/images/common/index_search.png" alt="">
-          <!-- <img v-show="MINT_auth"  @click="CustomerService" class="serve" src="../assets/images/common/index_serve.png" alt=""> -->
-          <!-- <img   @click="downloadApp"   src="../assets/images/common/download.png" alt=""> -->
-          <!-- <span class="right-title" @click="downloadApp">{{$t('base.download')}}</span> -->
+          <img @click="nShow = true"  src="../assets/images/common/index_search.png" alt="">
         </div>
     </div>
     <div :class="['content',{'show_download':showDownLoad}]">
       <div class="swiper_wrap">
 				<div class="swiper-container">
 					<div class="swiper-wrapper picslide">
-						<div class="swiper-slide index_slide" v-for=" i in banner">
+						<div class="swiper-slide index_slide" v-for=" i in banner" :key="i.ImageFilePath">
 							<a :href='i.ObjectValue'>
 								<img :src='$config.imgPath+ i.ImageFilePath' alt="">
 								<!-- <img src='../assets/images/banner.png' alt=""> -->
@@ -28,7 +25,7 @@
       <div class="notice" @click="toDetail(information)">
         <div class="notice_right">
           <div class="notice_ico">
-            <img src="../assets/images/common/notice_ico.png" alt="">
+            <img src="../assets/images/home/组 6107@2x.png" alt="">
           </div>
           <div>
             <p class="title"><span>{{$t('base.News')}}
@@ -42,9 +39,25 @@
           </div>
         </div>
         <div class="notice_left" @click.stop="newsMore">
-          <img src="../assets/images/common/notice_more.png" alt="" >
+          <img src="../assets/images/home/组 6108.png" alt="" >
         </div>
       </div>
+      <!-- <a :href="QuickCoinURL" ref="QuickCoinURL" @click.stop="toQuick" :target="QuickCoinURL!='#/login'?'_blank':''"> -->
+      <div class="quick_coin"  @click="toBuyCoins">
+          <div>
+            <div class="pic">
+              <img src="../assets/images/home/组 6176@2x.png" alt="">
+            </div>
+            <div>
+              <p>{{$t('base.Quickly')}}</p>
+              <p>{{$t('base.QuicklySub')}}</p>
+            </div>
+          </div>
+          <div>
+            <img src="../assets/images/home/组 6112.png" alt="">
+          </div>
+      </div>
+      
       <div class="nav">
         <ul>
           <li v-for="(i ,index) in navList" @click="toNavDetail(i)" :key="index">
@@ -55,34 +68,19 @@
           </li>
         </ul>
       </div>
-      <!-- <a :href="QuickCoinURL" ref="QuickCoinURL" @click.stop="toQuick" :target="QuickCoinURL!='#/login'?'_blank':''"> -->
-      <div class="quick_coin"  @click="toBuyCoins">
-          <div>
-            <div class="pic">
-              <img src="../assets/images/common/quick_coin.png" alt="">
-            </div>
-            <div>
-              <p>{{$t('base.Quickly')}}</p>
-              <p>{{$t('base.QuicklySub')}}</p>
-            </div>
-          </div>
-          <div>
-            <img src="../assets/images/common/quick_coin_ arrows.png" alt="">
-          </div>
-      </div>
       <!-- </a> -->
       <div class="con_list">
         <div class="con_title">
           <div class="lf">
-            <img src="../assets/images/common/index_trad_title.png" alt="">
+            <img src="../assets/images/home/路径 19201.png" alt="">
             {{$t('base.browsing')}}
           </div>
           <div class="fr" @click="$router.push('/market')">
-          {{$t('base.more')}} <img src="../assets/images/common/index_trad_title_more.png" alt="">
+          {{$t('base.more')}} >
           </div>
 
         </div>
-        <ul v-for="(i , index )  in SymbolsList" @click="toTrad(i)" v-if="index<10">
+        <ul v-for="(i , index )  in SymbolsList" @click="toTrad(i)" v-if="index<10" :key="index">
           <li>
             <div>
                 <p>{{i.BaseCurrency}}<span>/{{i.QuoteCurrency}}</span></p>
@@ -178,12 +176,12 @@ export default {
   },
   mounted(){
     this.navList= [
-          {ico:require('../assets/images/common/index_nav_ico.png'),url:'/mining',label:this.$t('base.indexNav'),hot:true},
-          {ico:require('../assets/images/common/index_nav_ico1.png'),url:'/blind_box',label:this.$t('base.indexNav1'),hot:true},
-          {ico:require('../assets/images/common/index_nav_ico2.png'),url:'/guess',label:this.$t('base.indexNav2'),hot:true},
-          {ico:require('../assets/images/common/index_nav_ico3.png'),url:'/financial',label:this.$t('base.indexNav3')}
+          {ico:require('../assets/images/home/index_nav_ico.png'),url:'/mining',label:this.$t('base.indexNav'),hot:false},
+          {ico:require('../assets/images/home/index_nav_ico1.png'),url:'/blind_box',label:this.$t('base.indexNav1'),hot:false},
+          {ico:require('../assets/images/home/index_nav_ico2.png'),url:'/guess',label:this.$t('base.indexNav2'),hot:false},
+          {ico:require('../assets/images/home/index_nav_ico3.png'),url:'/financial',label:this.$t('base.indexNav3')}
     ]
-    document.body.style.backgroundColor='#EAF0F8'
+    document.body.style.backgroundColor='#f6f6f6'
    this.lang  = localStorage.getItem('MINT_lang');
      let MINT_auth = localStorage.getItem("MINT_auth");
     MINT_auth = MINT_auth ?this.$decryptByDES(MINT_auth):"";
@@ -545,14 +543,14 @@ export default {
   destroyed(){
     console.log('清除定时器')
     clearInterval(this.Time);
-    document.body.style.backgroundColor='#fff'
+    // document.body.style.backgroundColor='#fff'
   }
 }
 </script>
 <style lang="less" scoped>
   .index_wrap{
     .header{
-      color: #fff;
+      color: #f1f1f1;
       height: 46PX;
       line-height: 46PX;
       position: fixed;
@@ -561,7 +559,7 @@ export default {
       top: 0;
       width: 100%;
       .bot_br;
-      background-color: #0d1625;
+      background-color: transparent;
       z-index: 1000;
       &.show_download{
         top:100px;
@@ -577,6 +575,7 @@ export default {
         // width: 50%;
         display: flex;
         align-items: center;
+        background: transparent;
         // justify-content: flex-end;
         img{
           height:46px;
@@ -600,10 +599,10 @@ export default {
       }
     }
     .content{
-      padding-top: 90px;
-      background-color: #0d1625;
+      // padding-top: 90px;
+      background-color: @background-color;
       &.show_download{
-        padding-top: 190px;
+        padding-top: 90px;
       }
       .sam1 {
         margin-left: 15px;
@@ -615,14 +614,16 @@ export default {
         background-color: #C72AFF;
       }
       .swiper_wrap{
-        background-color: #152439;
+        background-color: transparent;
         border-radius: 15px;
-        height: 330px;
-        padding: 10px 20px;
+        height: 430px;
+        // padding: 10px 20px;
         .swiper-container{
           .swiper-slide{
-            height: 300px;
-            border-radius: 20px;
+            width: 100%;
+            // padding: 0px 20px;
+            height: 400px;
+            // border-radius: 20px;
             overflow: hidden;
             // height: 100%;
           }
@@ -634,9 +635,9 @@ export default {
 
       }
       .notice{
-        background-color: #152439;
+        background-color: @panel_color;
         border-radius: 20px;
-        padding: 20px;
+        padding: 20px 20px 20px 0;
         margin: 20px;
         display: flex;
         align-items: center;
@@ -666,7 +667,7 @@ export default {
             span{
               font-size: 30px;
               &:nth-of-type(1){
-                color: #e1edf3;
+                color: @main_color;
                 // width: 85%;
                 display: block;
                 overflow : hidden;
@@ -693,13 +694,13 @@ export default {
               display: -webkit-box;
               -webkit-line-clamp: 1;
               -webkit-box-orient: vertical;
-              color: #e1edf4;
+              color: @font_color;
             }
           }
         }
       }
       .nav{
-        background-color: #152439;
+        background-color: @panel_color;
         border-radius: 20px;
         padding: 20px;
         margin: 20px;
@@ -739,13 +740,13 @@ export default {
             }
             p{
               font-size: 26px;
-              color: #e2edf4;
+              color: @font_color;
             }
           }
         }
       }
       .quick_coin{
-        background-color: #152439;
+        background-color: @panel_color;
         border-radius: 20px;
         padding: 20px;
         padding-right: 0;
@@ -767,12 +768,12 @@ export default {
                 margin-left: 20px;
                 p{
                   &:nth-of-type(1){
-                    color:#fff ;
+                    color:@font_color ;
                     font-size: 32px;
                     font-weight: 500;
                   }
                   &:nth-of-type(2){
-                    color: #e1edf3;
+                    color: @font_color;
                     font-size: 24px;
                   }
                 }
@@ -792,13 +793,13 @@ export default {
         margin: 20px;
         padding: 20px 30px;
         padding-bottom: 120px;
-        background-color: #152439;
+        background-color: @panel_color;
         border-top-right-radius: 24px;
         border-top-left-radius: 24px;
         // border-radius-top: 20px;
         .con_title{
           height: 122px;
-          color: #fff;
+          color: @font_color;
           .bot_br;
           display: flex;
           justify-content: space-between;
@@ -806,11 +807,11 @@ export default {
           .lf{
             font-size:32px;
             img{
-              width: 40px;
+              width: 30px;
             }
           }
           .fr{
-            color : #e1edf3;
+            color : @font_color;
             font-size: 28px ;
 
             img{
@@ -835,7 +836,7 @@ export default {
                   &:nth-of-type(1){
                     font-weight: 500;
                     font-size: 32px;
-                    color:#e1edf5;
+                    color:black;
                     span{
                       font-size: 18px;
                       color: @minor-font-color;
@@ -859,7 +860,7 @@ export default {
                 &:nth-of-type(1){
                   font-weight: 600;
                   font-size: 36px;
-                  color:#e2edf3;
+                  color: @font_color;
                 }
                 &:nth-of-type(2){
                   font-weight: 600;
@@ -876,8 +877,8 @@ export default {
                 display: flex;
                 align-items:center;
                 justify-content: center;
-                color: #fff;
-                border-radius: 4px;
+                color: @font_3_color;
+                border-radius: 8px;
                 &.up{
                   background-color: @up-color;
                 }
@@ -930,7 +931,7 @@ export default {
           width: 80%;
           border-radius: 10px;
           background-color: @main_color;
-          color :#fff;
+          color :@font_color;
         }
       }
 

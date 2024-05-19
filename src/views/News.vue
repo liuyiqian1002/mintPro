@@ -184,7 +184,7 @@ export default {
                 display: flex;
                 justify-content: space-between;
                 padding:10px 20px;
-                border-top: 1px solid #63737A;
+                // border-top: 1px solid #63737A;
                 color: @font_1_color;
                 align-items: center;
                 .active{
@@ -204,7 +204,8 @@ export default {
                     justify-content: space-between;
                     span{
                         &:nth-of-type(1){
-                            color: @font_1_color;
+                            color: @black;
+                            font-weight: 600;
                             width: 80%;
                             display: block;
                             overflow : hidden;

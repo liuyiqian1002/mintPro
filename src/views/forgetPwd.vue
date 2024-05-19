@@ -258,7 +258,7 @@ export default {
             background: transparent;
         }
         .van-nav-bar .van-nav-bar__left .van-icon{
-            color:#fff;
+            color: @font_color;
         }
         .van-hairline--bottom::after{
             border-bottom: unset;
@@ -271,7 +271,7 @@ export default {
 
     .forget_wrap{
         height: 100vh;
-        color: #fff;
+        color: @font_color;
         position: relative;
         // .logo{
         //     margin-top: 60px;
@@ -306,7 +306,7 @@ export default {
             display: flex;
             justify-content: space-between;
             >div{
-                color: #FFFFFF;
+                color: @font_color;
                 font-size: 29px;
                 padding: 10px 0 ;
                 &.active{
@@ -323,7 +323,7 @@ export default {
                 height: 112px;
                 line-height: 112px;
                 position: relative;
-                border-radius: 8px;
+                border-radius: 28px;
                 background-color: @panel_color;
                 // background: url(../assets/images/common/inpup_bg.png) no-repeat;
                 background-size: contain;
@@ -346,18 +346,18 @@ export default {
                     background-color:transparent;
                     &::-ms-input-placeholder {
                         /* Internet Explorer 10-11 */
-                        .cf;
+                        .input-placeholder;
                     }
                     &::-webkit-input-placeholder {
-                        .cf;
+                        .input-placeholder;
                     }
                     &::-moz-placeholder {
                         /* Mozilla Firefox 19+ */
-                        .cf;
+                        .input-placeholder;
                     }
                     &::-moz-placeholder {
                         /* Mozilla Firefox 4 to 18 */
-                        .cf;
+                        .input-placeholder;
                     }
                 }
                 &.email{
@@ -374,7 +374,7 @@ export default {
                         width: 130px;
                         text-align: center;
                         margin-right: 10px;
-                        color: #fff;
+                        color: @font_color;
                         font-size: 29px;
                         &::before{
                             content: '';
@@ -410,8 +410,9 @@ export default {
                         top: 50%;
                         right: 10px;
                         // border: 1px solid @main_color;
-                        background-color: @background-color;
-                        color: #fff;
+                        background-color: @btn_main_color;
+                        border-radius: 8px;
+                        color: @font_3_color;
                         font-size: 26px;
                         padding:5px 10px;
                         width: 200px;
@@ -549,6 +550,7 @@ export default {
                 font-size: 28px;
                 background-color: @main_color2;
                 color: @font_3_color;//@main_color;
+                border-radius: 28px;
             }
             .nav{
                 margin: 20px 0;

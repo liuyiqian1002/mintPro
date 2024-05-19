@@ -13,8 +13,8 @@ export default {
      * @description api请求基础路径
      */
     baseUrl: {
-        dev: '/api',
-        //dev: 'https://webapi.mintexc.com',
+        // dev: '/api',
+        dev: 'https://webapi.mintexc.com',
         pro: 'https://webapi.mintexc.com',
         // pro: 'http://129.204.104.65:10019',
     },

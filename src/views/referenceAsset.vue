@@ -105,7 +105,7 @@ export default {
                 margin-bottom: 20px;
                 padding: 20px;
                 .title{
-                    color: @font_1_color;
+                    color: @black;
                     display: flex;
                     align-items: center;
                     justify-content: space-between;
@@ -123,7 +123,7 @@ export default {
                         width: 33.33%;
                         p{
                             margin: 10px 0;
-                            color: @default-color ;
+                            color: @font_color ;
                             font-size: 24px;
                         }
                         &:nth-of-type(3){

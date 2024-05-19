@@ -2,14 +2,21 @@
 /*主色调*/
 @main_color: #65BD8D;
 @main_color2: #48D2AE;
-@bg_clor:#0d1625;
-@panel_color:#152439;
-@font_f_color: #93A1A8;
-@font_1_color:#E0EDF5;
+@bg_clor:#f6f6f6;
+@bg_btn_clor:#eee; //f1f1f1
+@panel_color:#ffffff;
+@panel2_color:#E3E3E4;
+@font_color:#3d3d3d;
+@font_f_color: #3d3d3d;
+@font_1_color: @font_color;
 @font_2_color:#000;
 @font_3_color:#fff;
+@font_4_color:#6E6E6E;
+@font_text_main_color: #03C1A7;
+@btn_main_color: #03C1A7;
+@btn_font_color:#fff;
+@black: #000;
 
-@font_color:#333333;
 /*辅助色*/
 @sub-color: #fbc115;
 /*点缀色1*/
@@ -18,6 +25,10 @@
 @ornament-color-2: #FD5C65;
 /*点缀色3*/
 @ornament-color-3: #828AFF;
+/*点缀色4*/
+@ornament-color-4: #FF8EA1;
+/*点缀色5*/
+@ornament-color-4: #Fec709;
 /*warning [订单 待付款 ]*/
 @warning-color: #FBC115;
 /*success [订单 已完成]*/
@@ -29,19 +40,19 @@
 /*重要文字/页内标题*/
 @important-font-color: #333333;
 /*辅助内容/状态默认色*/
-@sub-font-color: #E0EDF5;
+@sub-font-color: #595959;
 @sub-font-color2: #e7e7e7;
 /*次要内容文字颜色*/
 @minor-font-color: #93A1A8;
 /*背景色*/
-@background-color: #0d1625;
+@background-color: #f6f6f6;
 /*淡背景色*/
 @light-background-color: #EDF4FF;
 /*分割线色*/
 @splitter-color: #eeeeee;
 /*btn color*/
 @btn-color: #FF9900;
-@up-color:#0CC2A4;
+@up-color:#03C1A7;
 @down-color:#F25959;
 @bg-color:#EAF0F8;
 @main_f_color: #202021;
@@ -49,6 +60,7 @@
 @sub_f_color: #828282;
 @item_bg:#F5F6F7;
 @bg_color:#282724;
+@background-linear: linear-gradient( 145deg, #03C1A7 0%, #30AED4 100%);
 //IOS版本<11.2
 @padding-bottom:constant(safe-area-inset-bottom);
 
@@ -62,19 +74,19 @@ body {
         color: @sub-font-color;
     }
     .van-icon{
-        color: @sub-font-color !important;
+        color: @font_3_color !important;
     }
 }
 
 .van-nav-bar__title{
-    color:#fff;
+    color:#fff !important;
 }
 .van-hairline--bottom:after {
     border-bottom-width: 0px;
 }
 
 .van-empty__description{
-    color: @font_1_color;
+    color: @font_color;
     font-size: 28px;
 }
 .van-tab {
@@ -86,8 +98,8 @@ body {
 }
 
 .van-popup{
-    background-color: @bg_clor !important;
-    color: @font_1_color;
+    background: @background-linear !important;
+    color: @font_3_color;
 }
 
 .down-color{
@@ -332,7 +344,7 @@ input, textarea, select, button{
     font:24px Verdana, Helvetica, Arial, sans-serif
 }
 .van-nav-bar__text{
-    color: @font_color !important;
+    color: @font_3_color !important;
 }
 .main_btn{
     background-color: @main_color2;
@@ -346,7 +358,7 @@ input, textarea, select, button{
     }
 }
 .bot_br{
-    border-bottom: 1px solid #0d1625;
+    // border-bottom: 1px solid #0d1625;
 }
 .t{
     border: 1px solid #f00;
@@ -355,7 +367,10 @@ input, textarea, select, button{
     color: @main_color;
 }
 .cf{
-    color: @font_f_color;
+    color: @font_3_color;
+}
+.input-placeholder{
+    color: @font_color;
 }
 .input_bg{
 
@@ -372,3 +387,11 @@ input, textarea, select, button{
 
 
 }
+
+
+/* glolal 样式 */
+.van-nav-bar{
+    background: @background-linear;
+}
+
+// 滚动条美化

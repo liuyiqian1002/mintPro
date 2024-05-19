@@ -6,6 +6,7 @@ import 'lib-flexible/flexible'
 import config from '@/config'
 import '@/assets/icons/iconfont.css'
 import 'swiper/css/swiper.css';
+import './assets/style/global.css';
 import i18n from '@/libs/i18n'
 import axios from 'axios'
 import { decryptByDES } from "@/libs/util.js";

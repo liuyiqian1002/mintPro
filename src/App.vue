@@ -11,7 +11,7 @@
       @mousemove="move" @touchmove.stop="move"
       @mouseup="end" @touchend.stop="end"
       @click="CustomerService"
-      :style="{top:defaultPosition?'80%':(position.y+'px'), left:position.x+'px'}" src="./assets/images/common//ic_contract_service.png" alt="">
+      :style="{top:defaultPosition?'80%':(position.y+'px'), left:position.x+'px'}" src="./assets/images/home/ic_contract_service.png" alt="">
   </div>
 </template>
 <script>

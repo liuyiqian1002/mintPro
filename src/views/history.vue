@@ -21,7 +21,7 @@
           @change="changeNav"
           title-active-color="#fff"
         >
-          <van-tab :title="i" v-for="i in NavBar">
+          <van-tab :title="i" v-for="i,index in NavBar" :key="index">
                <div class="position">
                 <van-list
                     v-model="loading"
@@ -31,7 +31,7 @@
                 >
                 <van-empty v-show="isEmpty" :description="$t('base.noData')"    class="custom-image" :image="emptyImg" />
 
-                <div class="card" v-for=" i  in positionEntity">
+                <div class="card" v-for=" i,index  in positionEntity" :key="index">
                     <ul>
                         <li><span>{{$t('history.createdate')}}:</span>{{ $moment(i.createdate).format('YYYY/MM/DD  HH:mm')}}</li>
                         <li><span>{{$t('history.basecurrency')}}:</span>{{i.basecurrency}}/{{i.quotecurrency}}</li>

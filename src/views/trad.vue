@@ -198,7 +198,7 @@ export default {
       display: flex !important;
       width: 100%;
       bottom: 0px;
-      background-color:#0d1625; //rgb(15, 21, 36);
+      background-color:@background-color; //rgb(15, 21, 36);
       padding: 20px 10px;
       left: 0;
       right: 0;
@@ -229,7 +229,7 @@ export default {
     .coins_info{
       min-height: 400px;
       padding:0 30px;
-      background-color:#0d1625;
+      background-color:@background-color;
       padding-bottom: 200px;
       >.title{
         display: flex;
@@ -246,7 +246,7 @@ export default {
           }
           &:nth-of-type(2){
             font-size: 36px;
-            color: #E0EDF5;
+            color: @font_color;
             font-weight: 500;
           }
         }
@@ -275,7 +275,7 @@ export default {
             p{
               text-align: right;
               font-size: 28px;
-              color: @font_f_color;
+              color: @font_4_color;
               width: 100%;
               white-space: nowrap;
               overflow : hidden;
@@ -292,7 +292,7 @@ export default {
       .tips{
         .title{
           font-size: 36px;
-          color: @font_1_color;
+          color: @main_f_color;
           font-weight: 500;
 
         }
@@ -300,7 +300,7 @@ export default {
           margin-top: 28px;
           font-size: 28px;
           font-weight: 400;
-          color: @font_f_color;
+          color: @font_4_color;
         }
       }
 

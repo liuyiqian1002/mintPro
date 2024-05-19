@@ -113,10 +113,12 @@ export default {
                 height: 650px;
                 width: 500px;
                 margin: 0 auto;
-                background:url(../assets/images/common/ic_collection_code.png) no-repeat;
+                // background: #03C1A7;
                 background-size: 100%;
                 background-color: @panel_color;
                 p{
+                    background: #03C1A7;
+                    border-radius: 20px 20px 0px 0px;
                     text-align: center;
                     color: #fff;
                     height: 110px;

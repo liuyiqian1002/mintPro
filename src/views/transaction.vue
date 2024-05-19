@@ -283,7 +283,7 @@ export default {
     .contnet {
       padding: 20px;
       label{
-        color: @sub-font-color2;
+        color: @font_color;
         margin:5px 20px ;
         display: block;
       }

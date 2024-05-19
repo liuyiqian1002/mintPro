@@ -48,7 +48,7 @@
                     finished-text="没有更多了"
                     @load="onLoad"
                 > -->
-        <ul v-for="(i , index )  in SymbolsList" @click="toDetails(i)">
+        <ul v-for="(i , index )  in SymbolsList" @click="toDetails(i)" :key="index">
           <li>
             <div>
                 <p>{{i.BaseCurrency}}<span>/{{i.QuoteCurrency}}</span></p>
@@ -221,7 +221,7 @@ export default {
     .nav_property{
       margin-right:20px;
       text-align: center;
-      color: @font_1_color;
+      color: @font_color;
       >p{
         padding: 0;
         margin: 0;
@@ -259,7 +259,7 @@ export default {
           li {
             width: 33.33%;
             font-size: 28px;
-            color: @default-color;
+            color: @font_color;
             &:nth-of-type(2) {
               text-align: center;
             }
@@ -288,16 +288,16 @@ export default {
                 &:nth-of-type(1) {
                   font-weight: 500;
                   font-size: 32px;
-                  color:@sub-font-color2;
+                  color:@font_color;
                   span {
                     font-size: 18px;
-                    color: @sub-font-color2;
+                    color: @font_color;
                   }
                 }
                 &:nth-of-type(2) {
                   font-weight: 400;
                   // color: @minor-font-color;
-                  color: @minor-font-color;
+                  color: @font_text_main_color;
                 }
               }
             }
@@ -307,7 +307,7 @@ export default {
               &:nth-of-type(1) {
                 font-weight: 600;
                 font-size: 32px;
-                color:@sub-font-color2;
+                color:@font_color;
               }
               &:nth-of-type(2) {
                 font-weight: 600;
@@ -324,7 +324,7 @@ export default {
               display: flex;
               align-items: center;
               justify-content: center;
-              color: #fff;
+              color: @btn_font_color;
               border-radius: 4px;
               &.up {
                 background-color: @up-color;

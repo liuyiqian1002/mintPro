@@ -4,7 +4,7 @@
       <van-search
     v-model="keyWord"
     show-action
-    background="#152439"
+    background="linear-gradient( 145deg, #03C1A7 0%, #30AED4 100%)"
     :placeholder="$t('search.keyWord')" 
     @search="onSearch"
     @cancel="onCancel"
