@@ -746,7 +746,7 @@ export default {
           span {
             display: block;
             &:nth-of-type(1) {
-              color: #FFFAFA;
+              color: @font_color;
               margin-right: 20px;
             }
           }
@@ -758,10 +758,10 @@ export default {
             flex: 1;
             p {
               padding: 10px 0;
-              color:#FFFAFA
+              color: @font_color
             }
             p:nth-of-type(1) {
-              color: @font_f_color;
+              color: @font_color;
             }
           }
         }
@@ -951,7 +951,7 @@ export default {
             padding: 20px 0;
             .bot_br;
             > div.title {
-              color:#FFFAFA;
+              color: @font_color;
               height: 60px;
               line-height: 60px;
               span {
@@ -975,7 +975,7 @@ export default {
                   text-align: right;
                 }
                 p {
-                  color:#FFFAFA;
+                  color:@font_color;
                   padding: 10px 0;
                   font-size: 26px;
                   &:nth-of-type(1) {

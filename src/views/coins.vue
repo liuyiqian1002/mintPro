@@ -528,8 +528,9 @@ this.getBuyLegalCurrencyList()
             >div{
                 margin-right: 60px;
                 font-size: 44px;
+                color: @font_color;
                 &.act{
-                    color: #fff;
+                    color: @main_color;
                 }
             }
         }
@@ -606,9 +607,9 @@ this.getBuyLegalCurrencyList()
                                 // width: 120px;
                                 margin: 0 10px;
                                 background-color: @main_color2;
-                                color: #fff;
+                                color: @font_color;
                                 &.active{
-                                    color :#fff;
+                                    color:#fff;
                                     background-color: @main_color;
                                 }
                             }

@@ -219,7 +219,7 @@ export default {
         display: none;
       }
       iframe{
-
+        max-height: 1100px;
         &::-webkit-scrollbar {
           display: none;
         }
