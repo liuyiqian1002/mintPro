@@ -21,7 +21,7 @@ module.exports = {
         'submit': 'Submit',
         'upSeccess': 'Upload successful',
         'protocol': 'Contract Agreement',
-        'title': 'MINT',
+        'title': 'ALLXK',
         'tips': 'Tips',
         'download': 'APP',
         "welcome": 'Sign up',

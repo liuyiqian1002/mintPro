@@ -21,7 +21,7 @@
         }}</span>
       </p> -->
         <div class="pic">
-          <img src="../assets/images/common/logo.png" alt="" />
+          <img src="../assets/images/common/logo1.png" alt="" />
         </div>
         <!-- <p class="welcome">{{ $t("base.welcome") }}</p> -->
       </div>

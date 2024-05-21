@@ -3,7 +3,7 @@
     <div class="l" >
         <img src="../assets/images/common/logo.png" alt="">
         <div>
-            <p>MINT</p>
+            <p>{{$t('base.title')}}</p>
             <p>{{$t('base.downloadSubTitle')}}</p>
         </div>
     </div>
@@ -20,7 +20,7 @@ export default {
         downloadApp(){
             localStorage.setItem('download',Date.now());
            let lang  = localStorage.getItem('MINT_lang');
-          location.href= `https://download.mintexc.com`
+          location.href= `https://download.allxkx.com`
         },
         closeDownLoad(){
             localStorage.setItem('download',Date.now());
@@ -33,7 +33,7 @@ export default {
 <style lang="less" scoped>
     .down_load_wrap{
         margin: 0;
-        background-color:@panel_color ;
+        background:@background-linear ;
         position: fixed;
         z-index: 100;
         width: 100%;

@@ -22,7 +22,7 @@
           'submit': 'enviar',
           'upSeccess': 'Carregado com sucesso',
           'protocol': 'Contrato',
-          'title': 'MINT',
+          'title': 'ALLXK',
           'tips': 'incitar',
           'download': 'Baixar aplicativo',
           "welcome": 'daftar',

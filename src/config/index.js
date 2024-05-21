@@ -3,7 +3,7 @@ export default {
      * @description 配置显示在浏览器标签的title
      */
     title: '',
-    imgPath: "https://wap.mintexc.com",
+    imgPath: "https://wap.allxkx.com",
     /**
      * @description token在Cookie中存储的天数，默认1天
      */
@@ -14,8 +14,8 @@ export default {
      */
     baseUrl: {
         // dev: '/api',
-        dev: 'https://webapi.mintexc.com',
-        pro: 'https://webapi.mintexc.com',
+        dev: 'https://webapi.allxkx.com',
+        pro: 'https://webapi.allxkx.com',
         // pro: 'http://129.204.104.65:10019',
     },
     /**

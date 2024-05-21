@@ -21,7 +21,7 @@ module.exports = {
         'submit': 'Nộp',
         'upSeccess': 'Tải lên thành công',
         'protocol': 'Thỏa thuận hợp đồng',
-        'title': 'MINT',
+        'title': 'ALLXK',
         'tips': 'Lời khuyên',
         'download': 'ỨNG DỤNG',
         "welcome": 'Đăng ký',

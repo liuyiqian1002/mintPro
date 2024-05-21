@@ -21,7 +21,7 @@ module.exports = {
         'submit': 'Hantar',
         'upSeccess': 'Muat naik berjaya',
         'protocol': 'Perjanjian Kontrak',
-        'title': 'MINT',
+        'title': 'ALLXK',
         'tips': 'Petua',
         'download': 'APLIKASI',
         "welcome": 'Mendaftar',
