@@ -321,11 +321,11 @@ export const showTitle = (item, vm) => {
         // if (title.includes('{{') && title.includes('}}') && useI18n) title = title.replace(/({{[\s\S]+?}})/, (m, str) => str.replace(/{{([\s\S]*)}}/, (m, _) => vm.$t(_.trim())))
         if (title.includes('{{') && title.includes('}}') && useI18n) {
             title = title.replace(/({{[\s\S]+?}})/,
-                    (m, str) => str.replace(/{{([\s\S]*)}}/, (m, _) => title = i18n.messages[lang][_.split('.')[0]] ? i18n.messages[lang][_.split('.')[0]][_.split('.')[1]] : 'MINT'))
+                    (m, str) => str.replace(/{{([\s\S]*)}}/, (m, _) => title = i18n.messages[lang][_.split('.')[0]] ? i18n.messages[lang][_.split('.')[0]][_.split('.')[1]] : 'ALLXK'))
                 // i18n.messages[lang][_.split('.')[0]][_.split('.')[1]]
             console.log(">>>>>>>>>>>>>>>>>")
 
-        } else if (__titleIsFunction__) title = 'MINT' //item.meta.title
+        } else if (__titleIsFunction__) title = 'ALLXK' //item.meta.title
         else { title = vm.$t(item.name) }
     } else title = (item.meta && item.meta.title) || item.name
     return title
@@ -375,7 +375,7 @@ export const scrollTop = (el, from = 0, to, duration = 500, endCallback) => {
 export const setTitle = (routeItem, vm) => {
     const handledRoute = getRouteTitleHandled(routeItem)
     const pageTitle = showTitle(handledRoute, vm)
-    const resTitle = pageTitle ? `${title}${pageTitle}` : 'MINT'
+    const resTitle = pageTitle ? `${title}${pageTitle}` : 'ALLXK'
     window.document.title = resTitle
 }
 export const IsEmail = (str) => {
