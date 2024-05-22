@@ -203,7 +203,7 @@
       <!-- <p class="pwd_tips" v-show="!Password">{{$t('login.password')}}</p> -->
       <ul class="pwd_num">
         <li v-for="i,index in Password" :key="index"></li>
-        <li class="unent" v-for="i,index in 6 - Password.length" :key="index"></li>
+        <li class="unent" v-for="i,index in 6 - Password.length" :key="index.toString()"></li>
       </ul>
     </van-dialog>
     <van-number-keyboard
@@ -536,7 +536,7 @@ export default {
 </script>
 <style lang="less" >
 .deal_wrap {
-  background-color: @bg_clor;
+  background-color: @bg_color;
   height: 100vh;
   .custom-image .van-empty__image {
     width: 480px;
@@ -645,7 +645,7 @@ export default {
       // .t;
 
       input {
-        background-color: @bg_clor;
+        background-color: @bg_color;
         color: @sub-font-color;
       }
 

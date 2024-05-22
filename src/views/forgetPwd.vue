@@ -548,7 +548,7 @@ export default {
             .main_btn{
                 height: 90px;
                 font-size: 28px;
-                background-color: @main_color2;
+                background-color: @main2_color;
                 color: @font_3_color;//@main_color;
                 border-radius: 28px;
             }

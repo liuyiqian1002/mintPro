@@ -155,7 +155,7 @@ export default {
 </style>
 <style lang="less" scoped>
   .transaction_record_wrap{
-    background-color: @bg_clor;
+    background-color: @bg_color;
 
     .card {
       padding: 20px;

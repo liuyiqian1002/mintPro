@@ -133,7 +133,7 @@ export default {
             width: 100%;
             margin:  50px auto;
             button{
-                background-color:@main_color2 !important;
+                background-color:@main2_color !important;
             }
         }
         .bot{

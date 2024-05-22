@@ -146,10 +146,10 @@ methods:{
 </script>
 <style lang="less" >
     body {
-        background-color: @bg_clor;
+        background-color: @bg_color;
     }
     .history_wrap{
-        background-color: @bg_clor;
+        background-color: @bg_color;
         .custom-image .van-empty__image {
             width: 480px;
             height: 298px;
@@ -179,19 +179,18 @@ methods:{
             height: 80px;
         }
         .van-tabs__wrap{
-            background-color: @bg_clor;
-            .van-tabs__nav--card .van-tab{
+            background-color: @bg_color;
+            .van-tabs__nav--card .van-tab.van-tab--active{
                 color: #666;
-                border:2px solid #eee;
                 background-color: @main_color !important;
                 color: #fff !important;
-                // margin: 0 10px;
-                // border-radius: 8px;
             }
-            .van-tabs__nav--card .van-tab.van-tab--active{
+            .van-tabs__nav--card .van-tab{
                 background: unset;
+                border:1px solid @main_color !important;
                 background-color: #fff !important;//@main_color;
                 color: @main_color !important;
+                border-color: @main_color !important;
             }
         }
         .pic{

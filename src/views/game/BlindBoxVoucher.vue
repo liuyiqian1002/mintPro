@@ -16,7 +16,7 @@
           </div>
         </div>
         <van-empty v-show="isEmpty" :description="$t('base.noData')"    class="custom-image" :image="emptyImg" />
-          <div class="card" v-for="i in dataList">
+          <div class="card" v-for="i,index in dataList" :key="index">
               <div class="l">
                 <p>{{i.itemvalue}} {{i.itemname}}</p>
                 <p>≈{{i.usdttotal}} USD</p>
@@ -174,7 +174,7 @@ export default {
     }
     .blind_box_record_wrap{
         .van-nav-bar{
-            background: #1C2134;
+            // background: #1C2134;
         }
         .van-nav-bar__right,.van-nav-bar__text,
         .van-ellipsis,.van-nav-bar .van-nav-bar__left .van-icon{
@@ -188,7 +188,7 @@ export default {
 <style lang="less" scoped>
     .blind_box_record_wrap{
         min-height: 100vh;
-        background: #272A3F;
+        background: @panel_color;
         padding:40px;
         position: relative;
         .empty{
@@ -197,7 +197,8 @@ export default {
         .content{
             .top{
                 height: 170px;
-                background: url('../../assets/images/common/guess/voucher.png') no-repeat;
+                // background: url('../../assets/images/common/guess/voucher.png') no-repeat;
+                background: @background-linear;
                 background-size: 100% 100%;
                 margin-bottom: 20px;
                 display: flex;
@@ -208,7 +209,7 @@ export default {
                     text-align: center;
                     p{
                         &:nth-of-type(1){
-                            color: #04A3F2;
+                            color: @font_3_color;
                             font-size: 32px;
                             font-weight: 600;
                         }
@@ -235,20 +236,20 @@ export default {
                         font-weight: 500;
                     }
                     p:nth-of-type(2){
-                        color: #828282;
+                        color: @main2_color;
                         font-size: 24px;
                     }
                     button{
                         width: 152px;
                         height: 64px;
                         opacity: 1;
-                        background: #1679f8;
+                        background: @main2_color;
                         border-radius: 32px;
                         color: #fff;
                         font-size: 24px;
                         font-weight: 500;
                         &:disabled{
-                            background: #D0E4FE;
+                            background: @btn_disabled_bg_color;
                             color: #fff;
                         }
                     }

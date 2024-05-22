@@ -95,7 +95,7 @@ export default {
 </style>
 <style lang="less" scoped>
     .reference_asset_wrap{
-        background-color: @bg_clor;
+        background-color: @bg_color;
         height: 100vh;
         .content{
             padding: 20px;

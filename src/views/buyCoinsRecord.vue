@@ -132,7 +132,7 @@ export default {
 <style lang="less" scoped >
 .buy_coin_record{
     min-height: 100vh;
-    background-color: @bg_clor;
+    background-color: @bg_color;
     .content{
         padding:24px 30px ;
         .card{

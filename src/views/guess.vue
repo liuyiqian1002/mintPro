@@ -142,7 +142,6 @@
           type="card" 
           :offset-top="106"
           :sticky="true"
-          color="#1989fa"
           @change="changeNav"
           title-active-color="#fff"
         >
@@ -713,7 +712,7 @@ export default {
         }
         .van-tabs__wrap{
             padding: 20px 0;
-            background: #0D0F1E;
+            background: @panel_color;
         }
         .van-tabs__nav--card{
             border: unset;
@@ -741,17 +740,18 @@ export default {
             .van-tabs__nav--card .van-tab{
                 color: #666;
                 // border:2px solid #eee;
-                background-color: #202135 !important;
-                color: #fff !important;
+                background-color: @btn_main_color !important;
+                color: @font_3_color !important;
                 // margin: 0 10px;
                 border-radius: 8px;
+                border: none;
             }
             .van-tabs__nav--card .van-tab.van-tab--active{
                 background: unset;
-                background-color: #202135 !important;//@main_color;
+                background-color: @bg2_color !important;//@main_color;
                 border:1px solid @main_color;
 
-                color: #fff !important;
+                color: @font_color !important;
             }
         }
         .pic{
@@ -772,7 +772,7 @@ export default {
     }
     .guess_wrap{
         .van-nav-bar{
-            background: #1C2134;
+            background: @background-linear;
         }
         .van-nav-bar__right,.van-nav-bar__text,
         .van-ellipsis,.van-nav-bar .van-nav-bar__left .van-icon{
@@ -821,8 +821,9 @@ export default {
     }
     .guess_wrap{
         padding:0 30px 0;
+        background: @background-color;
         .game_type{
-            background: rgb(13, 15, 30);
+            // background: rgb(13, 15, 30);
             ul{
 
                 display: flex;
@@ -831,7 +832,7 @@ export default {
                 li{
 
                     margin: 10px 0;
-                    background: #1C2134;
+                    background: @bg2_color;
                     width: 33%;
                     height: 90px;
                     font-size: 34px;
@@ -842,9 +843,9 @@ export default {
                     &:nth-of-type(1){
                         &.active{
                             // background: #1679F8;
-                            background: url(../assets/images/common/guess/type_btn1.png) no-repeat;
+                            background: @btn_main_color;
                             background-size: 100% 100%;
-                            color: #fff;
+                            color: @font_3_color;
                         }
                     }
                     &:nth-of-type(2){
@@ -852,7 +853,7 @@ export default {
                             &.active{
                                 background: url(../assets/images/common/guess/type_btn2.png) no-repeat;
                                 background-size: 100% 100%;
-                                color: #fff;
+                                color: @font_3_color;
                             }
                         }
                     }
@@ -860,7 +861,7 @@ export default {
                         &.active{
                             background: url(../assets/images/common/guess/type_btn3.png) no-repeat;
                             background-size: 100% 100%;
-                            color: #fff;
+                            color: @font_3_color;
                         }
                     }
                     &:nth-of-type(1){
@@ -881,8 +882,8 @@ export default {
             overflow-y:hidden;
             margin-bottom: 20px;
             padding: 20px ;
-            background: url(../assets/images/common/guess/notice_bg.png) no-repeat;
-            background-size: 100% 100%;
+            // background: url(../assets/images/common/guess/notice_bg.png) no-repeat;
+            // background-size: 100% 100%;
             // .swipe_wrap{
             //     max-height: 240px;
             //     overflow:scroll;
@@ -903,22 +904,22 @@ export default {
         .guess_panel{
             margin-top: 20px;
             border-radius: 20px;
-            background-color: #171B2C;
+            background: @panel_color;
             overflow: hidden;
             .title{
-                background-color: #1C2134;
-                border-bottom: 1px solid #363D55;
+                // background-color: #1C2134;
+                border-bottom: 1px solid @main_color;
                 display: flex;
                 justify-content: space-between;
                 padding: 20px;
                 .left{
-                    color: #fff;
+                    color:  @font_color;
                 }
                 .time{
                     .colon {
                         display: inline-block;
                         margin: 0 4px;
-                        color: #fff;
+                        color: @font_color;
                     }
                     .block {
                         margin-left: 10px;
@@ -927,15 +928,15 @@ export default {
                         color: #0CC2A4;
                         font-size: 26px;
                         text-align: center;
-                        border: 2px solid #393f52;
-                        border-image: linear-gradient(180deg, #393f52 0%, #8991a7 52%, #393f52) 1 1;
+                        border: 2px solid @main_color;
+                        // border-image: linear-gradient(180deg, #393f52 0%, #8991a7 52%, #393f52) 1 1;
                     }
                 }
 
             }
             .sel{
                 padding: 20px;
-                background-color: #1C2134;
+                background-color: @panel_color;
                 display: flex;
                 justify-content: center;
                 >div{
@@ -950,7 +951,7 @@ export default {
                             display: block;
                             width: 2px;
                             height: 55%;
-                            background-color: #363D55;
+                            // background-color: #363D55;
                             position: absolute;
                             right: 0;
                             top: 50%;
@@ -1011,9 +1012,10 @@ export default {
                 padding:10px 20px;
                 display: flex;
                 justify-content: space-between;
-                color: #fff;
+                color: @font_text_main_color;
                 height: 100px;
                 align-items: center;
+                background: @main3_color;
                 >div{
                     &:nth-of-type(2){
                         width: 70%;
@@ -1030,7 +1032,9 @@ export default {
                         span{
                             right: 10px;
                         }
-                        border: 1px solid #1679F8;
+                        background: @panel_color;
+                        border-radius: 4px;
+                        // border: 1px solid @main_color;
                     }
                 }
 
@@ -1043,17 +1047,18 @@ export default {
                     justify-content: space-between;
                     li{
                         margin: 10px 0;
-                        background: #1C2134;
+                        background: @bg2_color;
                         width: 31.5%;
                         height: 90px;
                         font-size: 34px;
                         display: flex;
                         align-items: center;
-                        color: #6D7291;
+                        color: @font_color;
                         justify-content: center;
+                        border-radius: 8px;
                         &.active{
-                            background: #1679F8;
-                            color: #fff;
+                            background: @btn_main_color;
+                            color: @font_3_color;
                         }
 
                     }
@@ -1061,13 +1066,13 @@ export default {
             }
             .bot_tips{
                 padding: 20px;
-                background-color: #1C2134;
+                // background-color: #1C2134;
                 display: flex;
                 justify-content: space-between;
                 p{
                     color:#6D7291 ;
                     span{
-                        color:#fff;
+                        color:@main2_color;
                         margin:0 10px;
                         &.mc{
                             .mc;
@@ -1084,19 +1089,21 @@ export default {
             button{
                 width: 100%;
                 height: 100%;
-                background:url(../assets/images/common/guess/btn.png) no-repeat;
+                background: @btn_main_color;
                 background-size:100% 100%;
                 font-size: 28px;
-                color: #fff;
+                border-radius: 10px;
+                color: @font_3_color;
                 &:disabled{
-                    background:url(../assets/images/common/guess/btn_dis.png) no-repeat;
+                    color: @font_color;
+                    background: @panel_color;
                     background-size:100% 100%;
                 }
             }
         }
         .tips{
             margin-top: 20px;
-            color: #fff;
+            color: @font_color;
             display: flex;
             justify-content: space-between;
         }
@@ -1104,7 +1111,7 @@ export default {
 
             margin-top: 40px;
             .open{
-                color: #fff;
+                color: @font_color;
                 border-radius: 8px 8px 0 0;
                 overflow: hidden;
                 .card{
@@ -1112,15 +1119,15 @@ export default {
                     .title{
                         padding: 30px;
                         font-size: 24px;
-                        background-color:#1C2134;
+                        // background-color:#1C2134;
                     }
                     ul{
                         padding: 10px 30px;
                         &:nth-of-type(2n){
-                            background-color:#1C2134;
+                            background-color: @bg_color;
                         }
                         &:nth-of-type(2n+1){
-                            background-color:#171B2C;
+                            background-color: @bg2_color;
                         }
                         li{
                             display: flex;
@@ -1128,7 +1135,7 @@ export default {
                             padding: 10px 0;
                             span{
                                 font-size: 26px;
-                                color: #fff;
+                                color: @font_color;
                                 display: flex;
                                 align-items: center;
                                 &.up{
@@ -1140,7 +1147,7 @@ export default {
                                 label{
                                     margin-right: 15px;
                                     font-size: 26px;
-                                    color: #6D7291;
+                                    color: @font_color;
                                 }
                             }
 
@@ -1160,7 +1167,7 @@ export default {
                         }
                         li:not(:nth-last-of-type(1)){
                             .end{
-                                color: #F25959;
+                                // color: #F25959;
                             }
                             .mc{
                                 color: @main_color;
@@ -1190,7 +1197,7 @@ export default {
                                 background-color:@main_color;
                                 height: 60px;
                                 width: 220px;
-                                color: #fff;
+                                color: @font_color;
                                 border-radius: 8px;
                                 font-size: 28px;
                             }

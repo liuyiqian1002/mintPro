@@ -228,7 +228,7 @@ export default {
 .recommend_friend_wrap {
   .van-list__finished-text,
   .van-empty__description{
-    color:#fff;
+    color:@font_color;
   }
   .custom-image .van-empty__image {
          width: 480px;
@@ -237,7 +237,7 @@ export default {
        }
    .van-icon,
     .van-nav-bar__title{
-    color: #fff !important;
+    color: @font_color !important;
   }
     .van-nav-bar{
     background-color:transparent;
@@ -308,7 +308,7 @@ export default {
     background-color: @background-color;
     .van-list__finished-text,
     .van-empty__description{
-      color:#fff;
+      color:@font_color;
     }
     .custom-image .van-empty__image {
       width: 480px;
@@ -317,7 +317,7 @@ export default {
     }
     .van-icon,
     .van-nav-bar__title{
-      color: #fff !important;
+      color: @font_color !important;
     }
     .van-nav-bar{
       background-color:transparent;
@@ -362,7 +362,7 @@ export default {
       }
       .van-tabs__nav--card .van-tab.van-tab--active {
         background: unset;
-        background-color: @main_color2;
+        background-color: @main2_color;
         color:@font_3_color;
         border: none;
       }
@@ -388,7 +388,7 @@ export default {
         width: 528px;
         height: 786px;
         margin: 0 auto;
-        background-color:@main_color2;
+        background-color:@main2_color;
         background-size: contain;
         color:@font_3_color;
         border-radius: 40px;

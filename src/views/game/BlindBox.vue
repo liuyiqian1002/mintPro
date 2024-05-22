@@ -19,10 +19,10 @@
     <div class="title">
         {{$t('blindBox.goodLuck')}}
     </div>
-     <van-notice-bar class="notice"  color="#FFFFFF" background="#343751" 
+     <van-notice-bar class="notice"  color="#03C1A7" background="#FFFFFF" 
      :text="notice" 
     >
-        <span v-for="i in noticeList" style="margin-right:20px">{{i}}</span>
+        <span v-for="i,index in noticeList" style="margin-right:20px" :key="index">{{i}}</span>
      </van-notice-bar>
     <div class="panel">
         <p class="title">{{$t('blindBox.choose')}}</p>
@@ -82,9 +82,9 @@
         <img src="../../assets/images/common/guess/bot_bg_start.png" alt="">
     </div>
     <div class="empty"></div>
-    <div class="bot_bg">
+    <!-- <div class="bot_bg">
         <img src="../../assets/images/common/guess/blind_box_bot_bg.png" alt="">
-    </div>
+    </div> -->
      <!-- 游戏说明 -->
       <van-dialog
       v-model="isShowRule"
@@ -166,7 +166,7 @@
         class="pwd_num"
         @click="showKeyboard = !showKeyboard"
       >
-        <li v-for="i in Password"></li>
+        <li v-for="i,index in Password" :key="index"></li>
         <!-- <li class="unent" v-for="i in (6-Password.length)"></li> -->
 
       </ul>
@@ -489,7 +489,7 @@ export default {
         }
         .van-tabs__wrap{
             padding: 20px 0;
-            background: #0D0F1E;
+            // background: #0D0F1E;
         }
         .van-tabs__nav--card{
             border: unset;
@@ -548,7 +548,7 @@ export default {
     }
     .blind_box_wrap{
         .van-nav-bar{
-            background: #1C2134;
+            // background: #1C2134;
         }
         .van-nav-bar__right,.van-nav-bar__text,
         .van-ellipsis,.van-nav-bar .van-nav-bar__left .van-icon{
@@ -556,6 +556,9 @@ export default {
         }
         .van-hairline--bottom::after{
             border-bottom: unset;
+        }
+        .van-notice-bar__wrap{
+            //
         }
     }
 </style>
@@ -567,7 +570,7 @@ export default {
     }
     .blind_box_wrap{
         min-height: 100vh;
-        background: #272A3F;
+        background: linear-gradient( 145deg, #03C1A7 0%, #30AED4 100%);;
         padding:40px;
         position: relative;
         .r_bg ,.l_bg{
@@ -576,27 +579,28 @@ export default {
             width: 30px;
             height: 800px;
         }
-        .r_bg{
-            right: 0;
-            background:  url(../../assets/images/common/guess/blind_box_top_r_bg.png) no-repeat ;
-            background-size: 100% 100%;
-        }
-        .l_bg{
-            left: 0;
-            background:  url(../../assets/images/common/guess/blind_box_top_l_bg.png) no-repeat ;
-            background-size: 100% 100%;
-        }
+        // .r_bg{
+        //     right: 0;
+        //     background:  url(../../assets/images/common/guess/blind_box_top_r_bg.png) no-repeat ;
+        //     background-size: 100% 100%;
+        // }
+        // .l_bg{
+        //     left: 0;
+        //     background:  url(../../assets/images/common/guess/blind_box_top_l_bg.png) no-repeat ;
+        //     background-size: 100% 100%;
+        // }
         >div.title{
             height: 150px;
-            background:  url(../../assets/images/common/guess/blind_box_title.png) no-repeat ;
+            background: @panel_color;//url(../../assets/images/common/guess/blind_box_title.png) no-repeat ;
             background-size: cover;
             display: flex;
             align-items: center;
             justify-content: center;
             font-weight: bold;
-            color: #fff;
+            color: @main2_color;
             font-size: 38px;
-            padding-bottom: 30px;
+            border-radius: 8px;
+            // padding-bottom: 30px;
         }
         .notice{
             margin-top:20px;
@@ -606,12 +610,14 @@ export default {
             // height: 360px;
             padding:30px 40px;
             margin-top: 28px;
-            background: url('../../assets/images/common/guess/blind_box_panel.png')no-repeat;
+            border-radius: 8px;
+            background: @panel_color;// url('../../assets/images/common/guess/blind_box_panel.png')no-repeat;
             background-size: 100% 100%;
             >.title{
+                padding-bottom:20px;
                 text-align: center;
                 font-size: 28px;
-                color: #fff;
+                color: @font_text_main_color;
                 font-weight: 600;
             }
             ul{
@@ -624,49 +630,52 @@ export default {
                     padding: 30px 20px;
                     justify-content: center;
                     position: relative;
+                    border-radius: 10px;
+                    color: @btn_main_color;
+                    border: 6px solid @btn_main_color;
                     &.active{
-                        background: url('../../assets/images/common/guess/sel_bg.png') no-repeat center;
+                        background: @btn_main_color;
                         background-size: 100% 100%;
                         .pic{
-                            background: url('../../assets/images/common/guess/blind_box_sel.png')no-repeat;
+                            background: url('../../assets/images/common/guess/sel_bg.png') no-repeat;
                             background-size: 100% 100%;
                             &+p{
-                                color: #fff;
+                                color: @font_3_color;
                             }
                         }
 
                     }
-                    &::before{
-                        content: "";
-                        display: block;
-                        width: 4px;
-                        height: 100%;
-                        position: absolute;
-                        left: 0;
-                        background: url('../../assets/images/common/guess/line.png')no-repeat;
-                        background-size: 100% 100%;
-                    }
-                    &::after{
-                        content: "";
-                        display: block;
-                        width: 4px;
-                        height: 100%;
-                        position: absolute;
-                        right: 0;
-                        background: url('../../assets/images/common/guess/line.png')no-repeat;
-                        background-size: 100% 100%;
-                    }
+                    // &::before{
+                    //     content: "";
+                    //     display: block;
+                    //     width: 4px;
+                    //     height: 100%;
+                    //     position: absolute;
+                    //     left: 0;
+                    //     background: url('../../assets/images/common/guess/line.png')no-repeat;
+                    //     background-size: 100% 100%;
+                    // }
+                    // &::after{
+                    //     content: "";
+                    //     display: block;
+                    //     width: 4px;
+                    //     height: 100%;
+                    //     position: absolute;
+                    //     right: 0;
+                    //     background: url('../../assets/images/common/guess/line.png')no-repeat;
+                    //     background-size: 100% 100%;
+                    // }
                     width: 30%;
                     .pic{
                         width: 124px;
                         height: 124px;
                         margin: 30px auto 20px;
-                        background: url('../../assets/images/common/guess/blind_box_unsel.png')no-repeat;
+                        background: url('../../assets/images/common/guess/blind_box_sel.png')no-repeat;
                         background-size: 100% 100%;
                         &+p{
                             // margin-top: 10px;
                             font-size:28px ;
-                            color: #6D7291;
+                            color: @btn_main_color;
                         }
                     }
 
@@ -675,13 +684,14 @@ export default {
             }
             .tips{
                 text-align: center;
-                color: #6D7291;
+                color: @font_text_main_color;
                 font-size: 18px;
                 position: relative;
                 width: 100%;
                 display: flex;
                 align-items: center;
                 justify-content: center;
+                margin-top: 10px;
                 b{
                     margin: 0 5px;
                 }
@@ -695,15 +705,18 @@ export default {
             justify-content: space-between;
             padding:0 30px;
             align-items: center;
-            background: url('../../assets/images/common/guess/limit.png')no-repeat;
+            background: rgba(255,255,255,0.1);
+            // opacity: 0.1;// url('../../assets/images/common/guess/limit.png')no-repeat;
             background-size: 100% 100%;
+            border-radius: 10px;
             >span{
                 font-size: 26px;
+                opacity: 1;
                 &:nth-of-type(1){
-                    color: #6D7291;
+                    color: @main4_color;
                 }
                 &:nth-of-type(2){
-                    color: #fff;
+                    color: @font_3_color;
                 }
             }
 
@@ -719,10 +732,19 @@ export default {
 
                     display: flex;
                     justify-content: space-between;
+                    align-items: center;
                     >div{
                         width: 50%;
                         text-align: center;
-                        color: #fff;
+                        color: @font_3_color;
+                        background: rgba(255, 255, 255, .2);
+                        border-radius: 10px;
+                        height: 64px;
+                        // display: flex;
+                        // justify-content: center;
+                        // align-items: center;
+                        // word-break: break-all;
+                        // line-height: 64px;
                         // &.active{
                         //     &:nth-of-type(1){
                         //         display: flex;
@@ -740,27 +762,33 @@ export default {
                             display: flex;
                             align-items: center;
                             justify-content: center;
-                            background: url('../../assets/images/common/guess/l_btn_unsel.png')no-repeat;
+                            background: rgba(255, 255, 255, .2);//url('../../assets/images/common/guess/l_btn_unsel.png')no-repeat;
                             background-size: 100% 100%;
                             &.active{
-                                background: url('../../assets/images/common/guess/l_btn_sel.png')no-repeat;
-                                background-size: 100% 100%;
+                                // background: url('../../assets/images/common/guess/l_btn_sel.png')no-repeat;
+                                // background-size: 100% 100%;
                             }
                         }
                         &:nth-of-type(2){
-                            background: url('../../assets/images/common/guess/r_btn_unsel.png')no-repeat;
-                            background-size: 100% 100%;
-                            &.active{
-                                background: url('../../assets/images/common/guess/r_btn_sel.png')no-repeat;
-                                background-size: 100% 100%;
-                            }
+                            line-height: 32px;
+                            margin-left: 10px;
+                            // background: url('../../assets/images/common/guess/r_btn_unsel.png')no-repeat;
+                            // background-size: 100% 100%;
+                            // &.active{
+                            //     background: url('../../assets/images/common/guess/r_btn_sel.png')no-repeat;
+                            //     background-size: 100% 100%;
+                            // }
+                        }
+                        &.active{
+                            background: @panel_color;
+                            color: @font_text_main_color;
                         }
 
                     }
 
                 }
                 &.r{
-                    background: #212437;
+                    // background: #212437;
                     display: flex;
                     justify-content: space-between;
                     align-items: center;
@@ -768,10 +796,10 @@ export default {
                     >span{
                         font-size: 26px;
                         &:nth-of-type(1){
-                            color: #6D7291;
+                            color: @main4_color;
                         }
                         &:nth-of-type(2){
-                            color: #fff;
+                            color: @font_3_color;
                         }
                     }
 
@@ -782,18 +810,19 @@ export default {
             margin-top: 28px;
             height: 156px;
             opacity: 1;
-            background: url('../../assets/images/common/guess/btn_wrap_bg.png')no-repeat;
+            // url('../../assets/images/common/guess/btn_wrap_bg.png')no-repeat;
             background-size: 100% 100%;
             display: flex;
             align-items: center;
             button{
                 width: 80%;
                 height: 100px;
+                line-height: 100px;
                 margin: 0 auto;
-                background: url('../../assets/images/common/guess/btn_bg.png')no-repeat;
+                background: @panel_color;
                 background-size: 100% 100%;
                 font-weight: 600;
-                color: #fff;
+                color: @btn_main_color;
                 font-size: 28px;
                 padding-bottom: 26px;
 
@@ -807,16 +836,17 @@ export default {
             justify-content: space-between;
             padding:0 30px;
             align-items: center;
-            background:#1D1F31;
-            background-size: 100% 100%;
+            // background:#1D1F31;
+            // background-size: 100% 100%;
             >span{
                 font-size: 26px;
-                color: #6D7291;
+                color: @main4_color;
             }
         }
         >.btns{
             margin-top: 30px;
             height: 100px;
+            line-height: 100px;
             display: flex;
             justify-content: space-between;
             >button{
@@ -824,21 +854,23 @@ export default {
                 align-items: center;
                 justify-content: center;
                 padding-bottom: 10px;
-                color:#6D7291;
+                color:@font_3_color;
+                background: rgba(255, 255, 255, .5);
+                border-radius: 20px;
                 font-size: 28px;
                 img{
                     width: 28px;
                     margin-right: 10px;
                 }
                 width: 45%;
-                color:#fff;
+                // color:#fff;
                 &:nth-of-type(1){
-                    background: url('../../assets/images/common/guess/btn_l_bg.png')no-repeat;
-                    background-size: 100% 100%;
+                    // background: url('../../assets/images/common/guess/btn_l_bg.png')no-repeat;
+                    // background-size: 100% 100%;
                 }
                 &:nth-of-type(2){
-                    background: url('../../assets/images/common/guess/btn_r_bg.png')no-repeat;
-                    background-size: 100% 100%;
+                    // background: url('../../assets/images/common/guess/btn_r_bg.png')no-repeat;
+                    // background-size: 100% 100%;
                 }
 
             }

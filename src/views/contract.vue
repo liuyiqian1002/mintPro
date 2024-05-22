@@ -271,7 +271,7 @@ export default {
       }
     }
     .content {
-      background-color: @bg_clor;
+      background-color: @bg_color;
       padding: 220px 20px 120px;
       ul {
         display: flex;

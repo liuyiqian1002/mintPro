@@ -1,8 +1,11 @@
 /*全局 CSS 变量*/
 /*主色调*/
 @main_color: #65BD8D;
-@main_color2: #48D2AE;
-@bg_clor:#f6f6f6;
+@main2_color: #48D2AE;
+@main3_color: #D5F1EB;
+@main4_color: #AFE3D8;
+@bg_color:#f6f6f6;
+@bg2_color:#e5e5e5;
 @bg_btn_clor:#eee; //f1f1f1
 @panel_color:#ffffff;
 @panel2_color:#E3E3E4;
@@ -15,6 +18,7 @@
 @font_text_main_color: #03C1A7;
 @btn_main_color: #03C1A7;
 @btn_font_color:#fff;
+@btn_disabled_bg_color:#c8c9cc;
 @black: #000;
 
 /*辅助色*/
@@ -59,17 +63,18 @@
 // @font_f_color: #202021;
 @sub_f_color: #828282;
 @item_bg:#F5F6F7;
-@bg_color:#282724;
+// @bg_color:#282724;
 @background-linear: linear-gradient( 145deg, #03C1A7 0%, #30AED4 100%);
 //IOS版本<11.2
 @padding-bottom:constant(safe-area-inset-bottom);
 
+
 body {
-    background-color: @bg_clor;
+    background-color: @bg_color;
 }
 
 .van-nav-bar {
-    background-color: @bg_clor;
+    background-color: @bg_color;
     .van-nav-bar__title{
         color: @sub-font-color;
     }
@@ -90,11 +95,11 @@ body {
     font-size: 28px;
 }
 .van-tab {
-    background: @bg_clor;
+    background: @bg_color;
     padding: 0;
 }
 .van-tabs__nav{
-    background: @bg_clor;
+    background: @bg_color;
 }
 
 .van-popup{
@@ -347,7 +352,7 @@ input, textarea, select, button{
     color: @font_3_color !important;
 }
 .main_btn{
-    background-color: @main_color2;
+    background-color: @main2_color;
     height: 100px;
     color: #fff;
     font-size: 28px;

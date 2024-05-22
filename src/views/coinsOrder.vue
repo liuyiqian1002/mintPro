@@ -219,7 +219,7 @@ export default {
 </script>
 <style lang="less">
     .buy_coin_order {
-        background-color: @bg_clor;
+        background-color: @bg_color;
     }
 </style>
 <style lang="less" scoped >

@@ -8,11 +8,12 @@
                 >
                 <!-- @click-right="$router.push('/order')" -->
                 <template  #left >
-                    <van-icon
+                    <van-icon name="arrow-left" v-show="!token" size="20px" color="#3d3d3d !important" />
+                    <!-- <van-icon
                     v-show="!token"
                     :name="require('../assets/images/common/left-arrow.png')"
                     size="18"
-                    />
+                    /> -->
                 </template>
             </van-nav-bar>
             <div class="nav_bar">
@@ -64,7 +65,8 @@
     <van-popup v-model="showTips" position="bottom" class="tips_content" round>
         <div class="title">
             <p>{{$t('Coin.Notes')}}</p>
-            <img @click="showTips = false" src="../assets/images/common/tips_close.png" alt="">
+            <!-- <img @click="showTips = false" src="../assets/images/common/tips_close.png" alt=""> -->
+            <div class="close-icon"><van-icon @click="showTips = false" name="cross" /></div>
         </div>
         <div class="con">
             <iframe v-show="navIndex == 0" :src="iframeUrl" ref="iframe" frameborder="0"></iframe>
@@ -500,7 +502,7 @@ this.getBuyLegalCurrencyList()
 </script>
 <style lang="less">
     .buy_coin_content {
-        background-color: @bg_clor;
+        background-color: @bg_color;
     }
 </style>
 <style lang="less" scoped >
@@ -509,7 +511,7 @@ this.getBuyLegalCurrencyList()
     .top{
         height: 350px;
         position: relative;
-        background-color: @bg_clor;
+        background-color: @bg_color;
         .nav{
             background: transparent;
             &.van-hairline--bottom{
@@ -606,7 +608,7 @@ this.getBuyLegalCurrencyList()
                                 height: 100%;
                                 // width: 120px;
                                 margin: 0 10px;
-                                background-color: @main_color2;
+                                background-color: @main2_color;
                                 color: @font_color;
                                 &.active{
                                     color:#fff;
@@ -669,13 +671,13 @@ this.getBuyLegalCurrencyList()
             bottom: 90px;
             width: 100%;
             button{
-                background: @main_color2;
+                background: @main2_color;
             }
             p{
                 text-align: center;
                 margin-top: 60px;
                 font-size: 28px;
-                color: @main_color2;
+                color: @main2_color;
             }
         }
         .tips_content{
@@ -688,9 +690,9 @@ this.getBuyLegalCurrencyList()
                 justify-content: center;
                 align-items: center;
                 font-size: 36px;
-                color: @main_color2;
+                color: @font_color;
                 font-weight: 500;
-                img{
+                .close-icon{
                     position: absolute;
                     right:30px;
                     width: 40px;
@@ -726,7 +728,7 @@ this.getBuyLegalCurrencyList()
                 display: block;
                 margin: 10px auto;
                 width: 100%;
-                background-color: @main_color2;
+                background-color: @main2_color;
                 &:disabled{
                     background-color: rgba(22, 121, 248, .5);
                 }

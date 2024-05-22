@@ -16,7 +16,7 @@
           :finished-text="$t('base.noMore')"
           @load="onLoad"
         >
-          <div class="card" v-for="i in dataList">
+          <div class="card" v-for="i,index in dataList" :key="index">
               <p class="title"><span>{{$moment(i.CreateDate).format('YYYY-MM-DD HH:mm:ss')}}</span> <span>{{i.Frequency}}{{$t('blindBox.Times')}}</span></p>
                 <ul>
                     <li>
@@ -25,7 +25,7 @@
                     </li>
                     <li>
                         <label>{{$t('blindBoxRecord.currency')}}</label>
-                        <div><span v-for="k in i.WinningDetail" >{{k.Quantity}} {{k.Coin}}   </span>
+                        <div><span v-for="k,idx in i.WinningDetail" :key="idx">{{k.Quantity}} {{k.Coin}}   </span>
                         </div>
                     </li>
                 </ul>
@@ -144,7 +144,7 @@ export default {
     }
     .blind_box_record_wrap{
         .van-nav-bar{
-            background: #1C2134;
+            // background: ;
         }
         .van-nav-bar__right,.van-nav-bar__text,
         .van-ellipsis,.van-nav-bar .van-nav-bar__left .van-icon{
@@ -158,7 +158,7 @@ export default {
 <style lang="less" scoped>
     .blind_box_record_wrap{
         min-height: 100vh;
-        background: #272A3F;
+        background: @panel_color;
         padding:40px;
         position: relative;
         .empty{
@@ -166,18 +166,18 @@ export default {
         }
         .content{
             .card{
-                background: #343751;
+                background: @panel_color;
                 padding: 30px;
                 border-radius: 10px;
                 margin-bottom: 20px;
                 .title{
-                    color: #fff;
+                    color: @font_color;
                     display: flex;
                     justify-content: space-between;
                     span{
                         font-size: 26px;
                         &:nth-of-type(2){
-                            color: #0CC2A4;
+                            color: @main2_color;
                         }
                     }
                 }
@@ -187,12 +187,12 @@ export default {
                         margin-bottom: 10px;
                         display: flex;
                         label{
-                            color:#6D7291;
+                            color:@font_color;
                             font-size: 26px;
                             width: 33%;
                         }
                         div{
-                            color:#FFF;
+                            color:@font_color;
                             width: 67%;
                             span{
                                 display: inline-block;

@@ -203,7 +203,7 @@ export default {
                                 color: @font_1_color;
                                 &.active{
                                     color :#fff;
-                                    background-color: @main_color2;
+                                    background-color: @main2_color;
                                 }
                             }
 

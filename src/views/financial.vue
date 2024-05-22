@@ -344,37 +344,38 @@ export default {
 .financial_wrap{
     .top{
         height: 356px;
-        background: url('../assets/images/common/information_bg.png') no-repeat;
+        background: @background-linear;
         background-size: cover;
         text-align: center;
         >p{
             &:nth-of-type(1){
                 padding-top: 54px;
-                color: @main_color;
+                color: #fff;
                 font-size: 76px;
                 font-weight: 500;
             }
             &:nth-of-type(2){
-                color: #fff;
+                color: @font_3_color;
                 margin-top: 10px;
                 font-size: 28px;
             }
         }
         >div{
-            color: #fff;
+            color: @font_3_color;
             margin-top: 30px;
             display: flex;
             justify-content: center;
+            // font-size: 16px;
             >div{
                 flex: 1;
                 p{
                     margin-bottom: 10px;
                     &.mc{
-                        color: @main_color;
+                        color: @font_3_color;
                     }
 
                     &.green{
-                        color: #77FF25;
+                        // color: #77FF25;
 
                     }
                 }
@@ -451,21 +452,21 @@ export default {
                             text-align: center;
                             font-size: 30px;
                             &:nth-of-type(2){
-                                color: @main_color;
+                                color: @font_text_main_color;
                             }
                         }
 
                     }
                     &.act{
-                        background: #282724;
+                        background: @btn_main_color;
                         >div{
                             >p{
-                                color: #fff;
+                                color: @font_3_color;
                                 text-align: center;
                                 font-size: 30px;
-                                &:nth-of-type(2){
-                                    color: @main_color;
-                                }
+                                // &:nth-of-type(2){
+                                //     color: @font_4_color;
+                                // }
                             }
                         }
                     }
@@ -491,10 +492,10 @@ export default {
 
             }
             .main_btn{
-                background: @main_color;
+                background: @btn_main_color;
             }
             .sub_btn{
-                background: @bg_color;
+                background: @panel_color;
                 color: @main_color;
             }
         }

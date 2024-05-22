@@ -237,7 +237,7 @@ export default {
 </style>
 <style lang="less" scoped>
   .withdraw_record_wrap {
-    background-color: @bg_clor;
+    background-color: @bg_color;
     height: 100vh;
     padding: 20px;
     .card {

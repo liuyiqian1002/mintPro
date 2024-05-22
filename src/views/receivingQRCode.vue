@@ -98,7 +98,7 @@ export default {
 </style>
 <style lang="less" scoped>
     .receiving_qr_code_wrap{
-        background-color: @bg_clor;
+        background-color: @bg_color;
         height: 100vh;
         .contnet{
             margin-top: 50px;

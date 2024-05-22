@@ -226,7 +226,7 @@ export default {
 <style lang="less" >
 
   .exchaneg_wrap_main{
-    background-color: @bg_clor;
+    background-color: @bg_color;
     .van-hairline--bottom::after{
       border:none;
     }

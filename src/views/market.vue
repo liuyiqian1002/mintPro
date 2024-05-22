@@ -262,7 +262,7 @@ export default {
 </script>
 <style lang="less" >
 body {
-  background-color: @bg_clor;
+  background-color: @bg_color;
 }
 
 .van-hairline--bottom:after {
@@ -320,7 +320,7 @@ body {
     .van-tab__text{
       font-weight: bold;
       font-size: 48px;
-      color: @main_color2 !important;
+      color: @main2_color !important;
       transform: scale(0.6);
       border-radius: 28px;
       background: #fff;
@@ -346,7 +346,7 @@ body {
   // }
   .content {
     padding: 20px 20px 120px;
-    background-color: @bg_clor;
+    background-color: @bg_color;
     ul {
       display: flex;
       justify-content: space-between;

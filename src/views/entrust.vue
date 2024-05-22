@@ -466,11 +466,11 @@ export default {
 </style>
 <style lang="less" >
   body {
-    background-color: @bg_clor;
+    background-color: @bg_color;
   }
 
   .entrust_wrap{
-    background-color: @bg_clor;
+    background-color: @bg_color;
     .van-hairline--top-bottom,
     .van-hairline--bottom{
       &::after{
@@ -518,7 +518,7 @@ export default {
       }
       .van-tabs__nav--card .van-tab.van-tab--active{
         background: unset;
-        background-color: @main_color2 !important;
+        background-color: @main2_color !important;
         color:@font_3_color !important;
       }
     }
