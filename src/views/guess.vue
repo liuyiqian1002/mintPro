@@ -881,7 +881,7 @@ export default {
             height: 530px;
             overflow-y:hidden;
             margin-bottom: 20px;
-            padding: 20px ;
+            // padding: 20px ;
             // background: url(../assets/images/common/guess/notice_bg.png) no-repeat;
             // background-size: 100% 100%;
             // .swipe_wrap{
